@@ -1,0 +1,29 @@
+name: Alter Email Recipients
+version: 1.0
+description: Enables you to alter email recipients depending on form values
+icon: users
+author:
+  name: Webdeveloper in question
+  email: webdeveloper@something.com
+  url: something.com
+keywords: plugin, email, recipient
+homepage: https://github.com/path-to-git-repo-of-plugin
+bugs: https://github.com/path-to-git-repo-of-plugin/issues
+license: MIT
+
+dependencies:
+    - { name: grav, version: '>=1.1.9' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
